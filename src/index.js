@@ -1,3 +1,5 @@
+import './style.css';
+
 // Array of tasks
 let tasks = [
   { description: 'wash the dishes', completed: false, index: 1 },
