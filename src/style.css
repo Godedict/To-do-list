@@ -1,0 +1,139 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(231, 231, 231);
+}
+
+/* Styling for the To-Do List container */
+.todo {
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #cbcbcb;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 40px;
+  background-color: #fff;
+}
+
+/* Styling for the heading section */
+.heading {
+  display: flex;
+  border-bottom: solid;
+  border-color: #cbcbcb;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+
+/* Styling for the reload button */
+.reload {
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 20px;
+  border: none;
+  background: #fff;
+}
+
+/* Styling for the input field */
+input {
+  border: none;
+  font-style: italic;
+  outline: none;
+  padding-left: 10px;
+}
+
+/* Styling for the options (not used in the provided HTML) */
+.options {
+  border: none;
+  display: none;
+}
+
+/* Styling for the form element */
+#form {
+  border-bottom: solid;
+  border-color: #cbcbcb;
+}
+
+/* Styling for buttons inside forms */
+form button {
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Styling for the form class */
+.formclass {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /* gap: 0%; */
+}
+
+/* Styling for list items */
+li {
+  list-style-type: none;
+  border-bottom: solid;
+  border-color: #cbcbcb;
+  display: flex;
+  gap: 3%;
+}
+
+/* Styling for labels (not used in the provided HTML) */
+label {
+  padding-left: 10px;
+}
+
+/* Styling for the "clear all completed" button */
+#clear {
+  border: none;
+  width: 100%;
+  background-color: #efeded;
+  height: 45px;
+  cursor: pointer;
+}
+
+/* Styling for delete buttons */
+.delete {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2px 2px;
+  border: none;
+  background: none;
+}
+
+/* Styling for edit buttons */
+.edit {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the "times" icon (cross icon) */
+.fa-times {
+  margin-right: 10px;
+  border: solid;
+  background-color: #efeded;
+  border-color: #cbcbcb;
+  border-radius: 2px;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+/* Styling for the "pen" icon (edit icon) */
+.fa-pen {
+  margin-right: 5px;
+  border: solid;
+  background-color: #efeded;
+  border-color: #cbcbcb;
+  border-radius: 2px;
+  padding: 2px 2px;
+  cursor: pointer;
+}
