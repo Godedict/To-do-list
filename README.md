@@ -11,15 +11,19 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [Future Features](#future-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Test](#test)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 
@@ -50,15 +54,7 @@ In this project we mostly used HTML,JavaScript, CSS and webpack skills to comple
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Future Features <a name="future-features"></a>
-
-- **Implement a CSS Preprocessor.**
-- **Implement a Database**
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
 
 ### Take a Look
 
@@ -105,6 +101,13 @@ Use at the end '--fix' to help you out with any error.
 
 - GitHub: [@godedict](https://github.com/godedict)
 - Linkedin: [@adeniyi](https://www.linkedin.com/in/Aderounmu-adeniyi/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Future Features <a name="future-features"></a>
+
+- **Implement a CSS Preprocessor.**
+- **Implement a Database**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
