@@ -56,10 +56,6 @@ In this project we mostly used HTML,JavaScript, CSS and webpack skills to comple
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Take a Look
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
