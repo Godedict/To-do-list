@@ -33,9 +33,9 @@
 
 In this project we mostly used HTML,JavaScript, CSS and webpack skills to complete the project.
 
-## 🛠 Built With <a name="built-with">html, css, javascript, webpack</a>
+## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack">html, css, javascript, webpack</a>
+### Tech Stack <a name="tech-stack"></a>
 
 <details>
   <summary>Client</summary>
