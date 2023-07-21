@@ -1,14 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="murple_logo" alt="logo" width="140"  height="auto" />
   <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
+  <h3><b>Adeniyi Aderounmu - Microverse Student</b></h3>
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -16,139 +11,127 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Future Features](#future-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Test](#test)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
-# 📖 [To Do list: interactive list] <a name="about-project"></a>
+# 📖 To do List App <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+**To do List App** It's an application where users will Add or Remove activities in accordance to the users preference.
 
-**[To Do list: interactive list]** is a JavaScript solo project where a daily todo list directory is created  and fully functional.
+In this project we mostly used HTML,JavaScript, CSS and webpack skills to complete the project.
 
-## 🛠 Built With <a name="VS Code"></a>
+## 🛠 Built With <a name="built-with">html, css, javascript, webpack</a>
 
-### Tech Stack <a name="HTML, CSS, Webpack and JavaScript"></a>
+### Tech Stack <a name="tech-stack">html, css, javascript, webpack</a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<!-- Features -->
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+    <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+  </ul>
+</details>
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[made majorly with JavaScript]**
-- **[responsive]**
-- **[made with webpack]**
+- **Great Design and Colors.**
+- **Good Practices within each File.**
+- **Excellent use of Webpack.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+### Future Features <a name="future-features"></a>
+
+- **Implement a CSS Preprocessor.**
+- **Implement a Database**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
+### Take a Look
 
-<!-- GETTING STARTED -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-- A PC running any operating system like Windows, Linux, or MacOS.
-
-- An Stable Internet.
-
-- A web browser, preferably chrome.
-
-- Knowledge of basic Git commands
-
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-1.click: code and copy the link
-
-2.run: git clone git @ https://github.com/godedict/To-do-list
-
-3.Open the file in your code editor
-
-4.Right click on the html code nd click open live server
-
-5.Right click on the live server page and click inspect.
-
-### Install
-
-Install this project with:
-
-```sh
-  cd my-project
-  gem install
 ```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-```sh
-  rails server
+git clone https://github.com/Godedict/To-do-list.git
+cd Awesome-Project
+code . (To open VS Code Editor)
 ```
 
-### Run tests
+Then, you will change everything you want!
 
-To run tests, run the following command:
+### Test
 
-```sh
-  bin/rails test test/models/article_test.rb
+In order to follow the Linters you could check them using this:
+
+```
+HTML Checker:
+npx hint .
+
+CSS Checker:
+npx stylelint "**/*.{css,scss}"
+
+JavaScript Checker:
+npx eslint .
 ```
 
-### Deployment
+#### Note
 
-You can deploy this project using:
+Use at the end '--fix' to help you out with any error.
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Godedict**
+
+- GitHub: [@godedict](https://github.com/godedict)
+- Linkedin: [@adeniyi](https://www.linkedin.com/in/Aderounmu-adeniyi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
+## 🤝 Contributing <a name="contributing"></a>
 
-## 👥 Authors <a name="Aderounmu Adeniyi"></a>
+Contributions, issues, and feature requests are welcome!
 
-> Mention all of the collaborators of this project.
+Feel free to check the [issues page](https://github.com/Godedict/To-do-list/issues).
 
-👤 **Aderounmu Adeniyi**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- GitHub: [@Godedict](https://github.com/Godedict)
-- LinkedIn: [Aderounmu Adeniyi](https://linkedin.com/in/Aderounmu-Adeniyi/)
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project feel free to watch it and take some features that will enhance your project
+as well.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank the Microverse Team for reviewing my code and making me a better
+professional.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](MIT.md) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
