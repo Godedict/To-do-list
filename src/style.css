@@ -92,6 +92,23 @@ label {
   padding-left: 10px;
 }
 
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.task .fa-ellipsis-vertical::before {
+  color: rgb(164, 161, 157);
+  display: none;
+}
+
+div .fa-trash::before {
+  color: rgb(164, 161, 157);
+}
+
 /* Styling for the "clear all completed" button */
 #clear {
   border: none;
