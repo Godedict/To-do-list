@@ -83,21 +83,17 @@ li {
   list-style-type: none;
   border-bottom: solid;
   border-color: #cbcbcb;
-  display: flex;
   gap: 3%;
-}
-
-/* Styling for labels (not used in the provided HTML) */
-label {
-  padding-left: 10px;
-}
-
-li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* Styling for labels (not used in the provided HTML) */
+label {
+  padding-left: 10px;
 }
 
 .task .fa-ellipsis-vertical::before {
