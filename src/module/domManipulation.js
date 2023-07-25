@@ -8,10 +8,10 @@ function renderTasksWithHandles(tasks, deleteTaskCallback) {
   tasksContainer.innerHTML = '';
 
   // Iterate through the tasks array and create HTML list item elements with handles, checkboxes,
-  tasks.forEach((task, index) => {
+  tasks.forEach((task) => {
     const listItem = document.createElement('li');
     listItem.classList.add('task');
-    listItem.id = `task-${index}`;
+    listItem.id = `task-${task.index}`; // Use the task's index as the ID
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -37,7 +37,8 @@ function renderTasksWithHandles(tasks, deleteTaskCallback) {
 
     // Add event listener to delete icon
     deleteIcon.addEventListener('click', () => {
-      deleteTaskCallback(index + 1); // Call the deleteTaskCallback with the correct index
+      const taskId = parseInt(listItem.id.replace('task-', ''), 10); // Get the taskId
+      deleteTaskCallback(taskId); // Call the deleteTaskCallback with the correct taskId
     });
 
     // Add event listener to checkbox

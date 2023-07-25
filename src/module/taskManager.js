@@ -1,29 +1,50 @@
 // taskManager.js
 
 import tasks from './tasks.js';
+import { renderTasksWithHandles, makeTasksAndHandleDraggable } from './domManipulation.js';
 
 // Function to delete a task
-function deleteTask(index) {
-  // Filter out the task with the specified index from the tasks array
-  const updatedTasks = tasks.filter((task) => task.index !== index);
-  // Update the task index for the remaining tasks
-  updatedTasks.forEach((task, idx) => {
-    task.index = idx + 1;
-  });
-  // Update the tasks array in the tasks.js module
+function deleteTask(taskId) {
+  // Filter out the task with the specified ID from the tasks array
+  const updatedTasks = tasks.filter((task) => task.index !== taskId);
+
+  // Update the tasks array with the filtered tasks
   tasks.length = 0;
   tasks.push(...updatedTasks);
+
+  // Re-render the tasks list
+  renderTasksWithHandles(tasks, deleteTask);
+  makeTasksAndHandleDraggable();
 }
 
 // Function to edit task descriptions
-function editTaskDescription(index, newDescription) {
-  // Find the task with the specified index in the tasks array
-  const taskToEdit = tasks.find((task) => task.index === index);
+function editTaskDescription(taskId, newDescription) {
+  // Find the task with the specified ID in the tasks array
+  const taskToEdit = tasks.find((task) => task.index === taskId);
 
   // If the task is found, update its description
   if (taskToEdit) {
     taskToEdit.description = newDescription;
   }
+
+  // Re-render the tasks list
+  renderTasksWithHandles(tasks, deleteTask);
+  makeTasksAndHandleDraggable();
 }
 
-export { deleteTask, editTaskDescription };
+// Function to add a new task
+function addTask(taskDescription) {
+  const newTask = {
+    description: taskDescription,
+    completed: false,
+    index: tasks.length, // Use the current length as ID to maintain uniqueness
+  };
+
+  tasks.push(newTask);
+  // Re-render the tasks list
+  renderTasksWithHandles(tasks, deleteTask);
+  makeTasksAndHandleDraggable();
+}
+
+// Export the functions as named exports
+export { deleteTask, editTaskDescription, addTask };

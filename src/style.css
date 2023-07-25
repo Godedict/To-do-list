@@ -48,6 +48,14 @@ input {
   padding-left: 10px;
 }
 
+#taskInput {
+  width: 80%;
+}
+
+span {
+  width: 50%;
+}
+
 /* Styling for the options (not used in the provided HTML) */
 .options {
   border: none;
@@ -89,6 +97,15 @@ li {
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.edit-input {
+  /* Add your desired styles for the input element here */
+
+  /* For example, you can set width, border, padding, etc. */
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
 }
 
 /* Styling for labels (not used in the provided HTML) */

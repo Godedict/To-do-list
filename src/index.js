@@ -1,17 +1,9 @@
-/* eslint-disable no-alert */
 // index.js
 
 import './style.css';
 import { renderTasksWithHandles, makeTasksAndHandleDraggable } from './module/domManipulation.js';
 import tasks from './module/tasks.js';
-import { deleteTask, editTaskDescription } from './module/taskManager.js';
-
-// Function to add a new task
-function addTask(newTask) {
-  tasks.push(newTask);
-  renderTasksWithHandles(tasks, deleteTask); // Pass the deleteTask function as a callback
-  makeTasksAndHandleDraggable();
-}
+import { deleteTask, editTaskDescription, addTask } from './module/taskManager.js';
 
 // Function to clear all completed tasks
 function clearCompletedTasks() {
@@ -23,43 +15,24 @@ function clearCompletedTasks() {
   makeTasksAndHandleDraggable();
 }
 
-// Add event listener to the submit button
+// Add event listener to the submit button and form to add a new task
 const submitButton = document.querySelector('.submit');
-submitButton.addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent form submission (which would reload the page)
-  const taskInput = document.getElementById('taskInput');
-  const taskDescription = taskInput.value.trim();
-
-  if (taskDescription !== '') {
-    const newTask = {
-      description: taskDescription,
-      completed: false,
-      index: tasks.length + 1, // Assign a unique index for the new task
-    };
-    addTask(newTask);
-    // Clear the input field after adding the task
-    taskInput.value = '';
-  }
-});
-
-// Add event listener to the form to submit the task when pressing 'Enter'
 const form = document.getElementById('form');
-form.addEventListener('submit', (event) => {
+
+function handleTaskSubmission(event) {
   event.preventDefault(); // Prevent form submission (which would reload the page)
   const taskInput = document.getElementById('taskInput');
   const taskDescription = taskInput.value.trim();
 
   if (taskDescription !== '') {
-    const newTask = {
-      description: taskDescription,
-      completed: false,
-      index: tasks.length + 1, // Assign a unique index for the new task
-    };
-    addTask(newTask);
+    addTask(taskDescription);
     // Clear the input field after adding the task
     taskInput.value = '';
   }
-});
+}
+
+submitButton.addEventListener('click', handleTaskSubmission);
+form.addEventListener('submit', handleTaskSubmission);
 
 // Add event listener to the "Clear all completed" button
 const clearButton = document.getElementById('clear');
@@ -67,52 +40,42 @@ clearButton.addEventListener('click', () => {
   clearCompletedTasks();
 });
 
-// Event listener for deleting a task
+// Event listener for deleting a task and editing a task description
 const tasksContainer = document.getElementById('tasks');
 tasksContainer.addEventListener('click', (event) => {
-  if (event.target.classList.contains('fa-trash')) {
-    const taskElement = event.target.closest('.task');
-    const index = parseInt(taskElement.id.replace('task-', ''), 10);
-    deleteTask(index); // Use the deleteTask function to remove the task from the tasks array
-    renderTasksWithHandles(tasks, deleteTask); // Re-render the tasks after deletion
-    makeTasksAndHandleDraggable();
-  }
-});
+  const targetClassList = event.target.classList;
 
-// Update the event listener for editing a task description
-tasksContainer.addEventListener('click', (event) => {
-  if (event.target.classList.contains('description')) {
+  if (targetClassList.contains('fa-trash')) {
+    const taskElement = event.target.closest('.task');
+    const taskId = parseInt(taskElement.id.replace('task-', ''), 10); // Get the taskId
+    deleteTask(taskId);
+  } else if (targetClassList.contains('description')) {
     const taskElement = event.target.closest('.task');
     const index = parseInt(taskElement.id.replace('task-', ''), 10);
     const descriptionElement = taskElement.querySelector('.description');
 
-    // Create an input element for editing
-    const inputElement = document.createElement('input');
-    inputElement.type = 'text';
-    inputElement.value = descriptionElement.textContent;
-    inputElement.classList.add('edit-input');
-
-    // Replace the description element with the input element
-    taskElement.replaceChild(inputElement, descriptionElement);
-    inputElement.focus();
+    // Enable editing by setting contentEditable attribute
+    descriptionElement.contentEditable = true;
+    descriptionElement.focus();
 
     // Handle user input for editing the task
-    inputElement.addEventListener('blur', () => {
-      const newDescription = inputElement.value.trim();
+    descriptionElement.addEventListener('blur', () => {
+      const newDescription = descriptionElement.textContent.trim();
       if (newDescription !== '') {
         editTaskDescription(index, newDescription);
-        renderTasksWithHandles(tasks, deleteTask); // Re-render the tasks after editing
-        makeTasksAndHandleDraggable();
       } else {
         // If the edited description is empty, reset it to the previous value
-        inputElement.value = tasks[index - 1].description;
+        descriptionElement.textContent = tasks[index - 1].description;
       }
+
+      // Disable editing after the user finishes editing
+      descriptionElement.contentEditable = false;
     });
 
     // Handle Enter key press to save changes
-    inputElement.addEventListener('keyup', (event) => {
+    descriptionElement.addEventListener('keyup', (event) => {
       if (event.key === 'Enter') {
-        inputElement.blur();
+        descriptionElement.blur();
       }
     });
   }
