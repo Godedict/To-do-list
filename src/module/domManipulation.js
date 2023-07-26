@@ -19,6 +19,8 @@ function renderTasksWithHandles(tasks, deleteTaskCallback) {
 
     const description = document.createElement('span');
     description.textContent = task.description;
+    description.classList.add('description'); // Add the 'description' class to the task description element
+    description.setAttribute('contenteditable', 'true'); // Make the task description editable
     description.style.textDecoration = task.completed ? 'line-through' : 'none'; // Apply strikethrough style for completed tasks
 
     const handle = document.createElement('div');
